@@ -1,0 +1,139 @@
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 380px));
+  justify-content: center;
+  gap: 28px;
+  align-items: stretch;
+}
+.product-card {
+  border: 1px solid #edd9e5;
+  background: #fffdf8;
+  border-radius: 23px;
+  overflow: hidden;
+  box-shadow: 0 12px 36px #59284e0b;
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 42px #59284e17;
+}
+
+.product-image-wrap {
+  position: relative;
+  width: 100%;
+  height: 340px;
+  overflow: hidden;
+  background: #f7ead5;
+}
+
+.product-image-wrap img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.product-image-wrap.image-fallback img {
+  display: none;
+}
+.image-fallback-label {
+  display: none;
+  position: absolute;
+  color: var(--plum);
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+}
+.image-fallback .image-fallback-label {
+  display: block;
+}
+.product-tag {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 2;
+  background: #fff9efeb;
+  border: 1px solid #fff;
+  border-radius: 999px;
+  padding: 7px 11px;
+  color: var(--plum);
+  font-size: 9px;
+  font-weight: 700;
+}
+.discount-pill {
+  position: absolute;
+  top: 52px;
+  left: 15px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--coral);
+  color: white;
+  border-radius: 999px;
+  padding: 6px 9px;
+  font-size: 9px;
+  font-weight: 700;
+}
+.quick-add {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  z-index: 3;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--plum);
+  color: white;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 5px 14px #57244f33;
+}
+.product-info {
+  padding: 23px 24px 25px;
+}
+.product-type {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--purple);
+}
+.product-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 10px 0 8px;
+}
+.product-title-row h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  font-weight: 500;
+  color: var(--plum);
+  margin: 0;
+}
+.product-price {
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--plum);
+  text-align: right;
+}
+.product-price del {
+  display: block;
+  font-size: 10px;
+  color: #9c8999;
+  font-weight: 400;
+}
+.product-info p {
+  font-size: 12px;
+  line-height: 1.7;
+  min-height: 42px;
+  margin-bottom: 18px;
+}
+.product-info .text-link {
+  cursor: pointer;
+}

@@ -1,0 +1,75 @@
+
+.instagram-testimonials {
+  background: #fffdf6;
+}
+
+.instagram-reel-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1120px;
+  margin: 40px auto 0;
+  align-items: start;
+}
+
+.instagram-reel-card {
+  min-width: 0;
+  overflow: hidden;
+  padding: 10px;
+  border: 1px solid #d8e1d4;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(3, 69, 45, 0.08);
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.instagram-reel-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 32px rgba(3, 69, 45, 0.14);
+}
+
+.instagram-reel-card .instagram-media {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+}
+
+.instagram-follow {
+  margin-top: 32px;
+  text-align: center;
+  color: #294333;
+}
+
+.instagram-follow-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  background: #03452d;
+  color: #fffdf6;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s ease,
+              transform 0.2s ease;
+}
+
+.instagram-follow-btn:hover {
+  background: #023823;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 850px) {
+  .instagram-reel-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
+@media (max-width: 560px) {
+  .instagram-reel-grid {
+    grid-template-columns: 1fr;
+    max-width: 380px;
+  }
+}

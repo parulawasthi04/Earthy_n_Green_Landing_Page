@@ -1,0 +1,888 @@
+
+/* ==========================================
+   EARTHY N GREEN — GLOBAL ANIMATIONS
+========================================== */
+
+:root {
+  --animation-green: #03452D;
+  --animation-lime: #A8C94A;
+  --animation-cream: #FFFDF6;
+  --animation-brown: #603515;
+  --animation-duration: 0.3s;
+  --animation-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+/* Consistent transitions */
+a,
+button,
+input,
+textarea,
+select {
+  transition:
+    color 0.25s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* ==========================================
+   PAGE ENTRANCE
+========================================== */
+
+@keyframes eg-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes eg-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes eg-image-reveal {
+  from {
+    opacity: 0.65;
+    transform: scale(1.045);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes eg-soft-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes eg-leaf-sway {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+/* Story page */
+.story-teaser-copy {
+  animation: eg-fade-up 0.8s var(--animation-ease) both;
+}
+
+.story-teaser-image img {
+  animation: eg-image-reveal 1s var(--animation-ease) both;
+}
+
+.story-signoff {
+  animation: eg-fade-in 1s ease both;
+}
+
+/* Impact page */
+.impact-item {
+  animation: eg-fade-up 0.7s var(--animation-ease) both;
+}
+
+.impact-item:nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+.impact-item:nth-child(3) {
+  animation-delay: 0.24s;
+}
+
+.impact-item:nth-child(4) {
+  animation-delay: 0.36s;
+}
+
+/* Story accordions */
+.story-accordion {
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.story-accordion[open] {
+  border-color: var(--animation-lime);
+  box-shadow: 0 8px 24px #03452D0D;
+}
+
+.story-accordion summary:hover .story-summary-icon {
+  background: var(--animation-lime);
+  transform: scale(1.06);
+}
+
+/* ==========================================
+   PRODUCT CARDS
+========================================== */
+
+/* Supports common product-card class names */
+.product-card,
+.product-item {
+  transition:
+    transform 0.35s var(--animation-ease),
+    box-shadow 0.35s ease,
+    border-color 0.3s ease;
+}
+
+.product-card:hover,
+.product-item:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 16px 35px #03452D16;
+}
+
+.product-card img,
+.product-item img {
+  transition: transform 0.55s var(--animation-ease);
+}
+
+.product-card:hover img,
+.product-item:hover img {
+  transform: scale(1.045);
+}
+
+/* Avoid zooming images beyond their cards */
+.product-card,
+.product-item {
+  overflow: hidden;
+}
+
+/* ==========================================
+   IMPACT & TESTIMONIAL CARDS
+========================================== */
+
+.impact-page-grid article,
+.testimonial-card,
+.contact-info > div {
+  transition:
+    transform 0.3s var(--animation-ease),
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.impact-page-grid article:hover,
+.testimonial-card:hover,
+.contact-info > div:hover {
+  transform: translateY(-5px);
+  border-color: var(--animation-lime);
+  box-shadow: 0 12px 28px #03452D10;
+}
+
+.impact-page-grid article > svg,
+.contact-info > div > svg {
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.impact-page-grid article:hover > svg,
+.contact-info > div:hover > svg {
+  transform: scale(1.12);
+  color: var(--animation-green);
+}
+
+/* ==========================================
+   OFFERINGS SECTION
+========================================== */
+
+.offering-list > div {
+  transition:
+    padding-left 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.offering-list > div:hover {
+  padding-left: 8px;
+}
+
+.offering-number {
+  transition: color 0.25s ease;
+}
+
+.offering-list > div:hover .offering-number {
+  color: #D5EAA0;
+}
+
+.offering-list svg {
+  transition: transform 0.3s var(--animation-ease);
+}
+
+.offering-list > div:hover svg {
+  transform: translateX(4px);
+}
+
+/* Decorative sparkle */
+.offerings-sparkle {
+  animation: eg-soft-float 5s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* ==========================================
+   STORY IMAGE & PROMOTIONAL ORNAMENT
+========================================== */
+
+.story-page-photo {
+  transition:
+    transform 0.5s var(--animation-ease),
+    box-shadow 0.35s ease;
+}
+
+.story-page-grid > div:first-child {
+  overflow: hidden;
+  border-radius: 22px;
+}
+
+.story-page-grid > div:first-child:hover .story-page-photo {
+  transform: scale(1.025);
+  box-shadow: 0 14px 32px #03452D18;
+}
+
+.pramo-ornament {
+  animation: eg-soft-float 3.5s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.button,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.button:hover,
+button:hover {
+  transform: translateY(-2px);
+}
+
+.button:active,
+button:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.button:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--animation-lime);
+  outline-offset: 4px;
+}
+
+/* ==========================================
+   LINKS & NAVIGATION
+========================================== */
+
+.footer-links a {
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.footer-links a:hover {
+  color: var(--animation-lime);
+  transform: translateX(4px);
+}
+
+.brand-logo {
+  transition: transform 0.35s var(--animation-ease);
+}
+
+.brand:hover .brand-logo {
+  transform: rotate(-5deg) scale(1.05);
+}
+
+/* ==========================================
+   ACCESSIBILITY & MOBILE
+========================================== */
+
+@media (hover: none) {
+  .product-card:hover,
+  .product-item:hover,
+  .testimonial-card:hover,
+  .impact-page-grid article:hover,
+  .contact-info > div:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .offerings-sparkle {
+    animation-duration: 7s;
+  }
+
+  .story-teaser-image img {
+    animation-duration: 0.7s;
+  }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==========================================
+   EARTHY N GREEN — PREMIUM ANIMATION PACK
+========================================== */
+
+/* 1. Smooth entrance animations */
+
+@keyframes eg-slide-left {
+  from {
+    opacity: 0;
+    transform: translateX(-35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes eg-slide-right {
+  from {
+    opacity: 0;
+    transform: translateX(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes eg-pop-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.88);
+  }
+  75% {
+    transform: scale(1.025);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes eg-soft-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 #A8C94A00;
+  }
+  50% {
+    box-shadow: 0 0 22px 2px #A8C94A35;
+  }
+}
+
+@keyframes eg-shimmer {
+  from {
+    background-position: 200% center;
+  }
+  to {
+    background-position: -200% center;
+  }
+}
+
+@keyframes eg-rotate-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 2. Hero section */
+
+.hero h1,
+.hero-content h1 {
+  animation: eg-slide-left 0.85s ease both;
+}
+
+.hero p,
+.hero-content p {
+  animation: eg-fade-up 0.9s 0.15s ease both;
+}
+
+.hero .button,
+.hero-content .button {
+  animation: eg-pop-in 0.7s 0.3s ease both;
+}
+
+.hero img,
+.hero-image img {
+  animation: eg-slide-right 1s ease both;
+  transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.hero img:hover,
+.hero-image img:hover {
+  transform: scale(1.035);
+}
+
+/* 3. Animated navigation underline */
+
+header nav a,
+.navbar nav a {
+  position: relative;
+  text-decoration: none;
+}
+
+header nav a::after,
+.navbar nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background: #A8C94A;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+header nav a:hover::after,
+.navbar nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* 4. Premium button shine */
+
+.button,
+button {
+  position: relative;
+  overflow: hidden;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -75%;
+  width: 45%;
+  height: 200%;
+  background: #FFFFFF35;
+  transform: rotate(22deg);
+  transition: left 0.6s ease;
+  pointer-events: none;
+}
+
+.button:hover::after {
+  left: 135%;
+}
+
+/* 5. Product image hover */
+
+.product-card img,
+.product-item img {
+  transition:
+    transform 0.65s cubic-bezier(0.2, 0.8, 0.2, 1),
+    filter 0.4s ease;
+}
+
+.product-card:hover img,
+.product-item:hover img {
+  transform: scale(1.07);
+  filter: saturate(1.08);
+}
+
+/* 6. Staggered card entrance */
+
+.product-card,
+.product-item,
+.testimonial-card,
+.impact-page-grid article {
+  animation: eg-fade-up 0.7s ease both;
+}
+
+.product-card:nth-child(2),
+.product-item:nth-child(2),
+.testimonial-card:nth-child(2),
+.impact-page-grid article:nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+.product-card:nth-child(3),
+.product-item:nth-child(3),
+.testimonial-card:nth-child(3),
+.impact-page-grid article:nth-child(3) {
+  animation-delay: 0.24s;
+}
+
+.product-card:nth-child(4),
+.product-item:nth-child(4),
+.impact-page-grid article:nth-child(4) {
+  animation-delay: 0.36s;
+}
+
+/* 7. Story section image polish */
+
+.story-teaser-image,
+.story-page-grid > div:first-child {
+  overflow: hidden;
+}
+
+.story-teaser-image img,
+.story-page-photo {
+  transition:
+    transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
+    filter 0.5s ease;
+}
+
+.story-teaser-image:hover img,
+.story-page-grid > div:first-child:hover .story-page-photo {
+  transform: scale(1.045);
+  filter: saturate(1.06);
+}
+
+/* 8. Impact icons */
+
+.impact-icon {
+  transition:
+    transform 0.35s ease,
+    background-color 0.35s ease;
+}
+
+.impact-item:hover .impact-icon {
+  transform: translateY(-5px) rotate(-5deg);
+  background: #A8C94A;
+}
+
+/* 9. Testimonial stars */
+
+.testimonial-card .stars {
+  transition: transform 0.3s ease;
+  transform-origin: left center;
+}
+
+.testimonial-card:hover .stars {
+  transform: scale(1.08);
+}
+
+/* 10. Festive promotional section */
+
+.pramo-ornament {
+  display: inline-block;
+  animation: eg-soft-float 3s ease-in-out infinite;
+}
+
+.pramo-section .button:hover {
+  animation: eg-soft-glow 1.5s ease-in-out infinite;
+}
+
+/* 11. Logo interaction */
+
+.brand-logo {
+  transition: transform 0.4s ease;
+}
+
+.brand:hover .brand-logo {
+  transform: rotate(-8deg) scale(1.08);
+}
+
+/* 12. Footer decorative motion */
+
+.footer-motto svg {
+  animation: eg-soft-float 3s ease-in-out infinite;
+}
+
+.footer-brand .brand-mark {
+  transition: transform 0.35s ease;
+}
+
+.footer-brand:hover .brand-mark {
+  transform: translateY(-3px);
+}
+
+/* 13. Accordion open effect */
+
+.story-accordion[open] .accordion-content {
+  animation: eg-fade-up 0.35s ease both;
+}
+
+.story-summary-icon {
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.story-accordion summary:hover .story-summary-icon {
+  transform: rotate(-8deg) scale(1.08);
+}
+
+/* 14. Contact cards */
+
+.contact-info > div {
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.contact-info > div:hover {
+  transform: translateX(5px);
+  border-color: #A8C94A;
+  box-shadow: 0 8px 24px #03452D10;
+}
+
+/* 15. Accessibility: reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 16. Mobile: avoid excessive movement */
+
+@media (max-width: 760px) {
+  .hero img:hover,
+  .hero-image img:hover,
+  .product-card:hover img,
+  .product-item:hover img,
+  .story-teaser-image:hover img {
+    transform: none;
+  }
+
+  .contact-info > div:hover {
+    transform: none;
+  }
+
+  .button::after {
+    display: none;
+  }
+}
+
+/* ==========================================
+   EARTHY N GREEN — HERO ANIMATIONS
+========================================== */
+
+/* Hero text entrance */
+@keyframes hero-text-enter {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hero image entrance */
+@keyframes hero-image-enter {
+  from {
+    opacity: 0;
+    transform: translateX(35px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* Gentle floating motion */
+@keyframes hero-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+/* Decorative rangoli rotation */
+@keyframes hero-rangoli {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(25deg);
+  }
+}
+
+/* Soft glow around product */
+@keyframes hero-glow {
+  0%, 100% {
+    box-shadow: 0 22px 55px rgba(3, 69, 45, 0.13);
+  }
+  50% {
+    box-shadow: 0 25px 65px rgba(3, 69, 45, 0.22);
+  }
+}
+
+/* Eyebrow */
+.hero .eyebrow {
+  animation: hero-text-enter 0.65s ease both;
+}
+
+/* Main heading */
+.hero h1 {
+  animation: hero-text-enter 0.8s 0.1s ease both;
+}
+
+/* Supporting text */
+.hero .hero-subtitle {
+  animation: hero-text-enter 0.8s 0.2s ease both;
+}
+
+.hero .hero-description {
+  animation: hero-text-enter 0.8s 0.3s ease both;
+}
+
+/* CTA buttons */
+.hero .hero-buttons {
+  animation: hero-text-enter 0.8s 0.4s ease both;
+}
+
+/* Promise icons and text */
+.hero .hero-promises {
+  animation: hero-text-enter 0.8s 0.5s ease both;
+}
+
+/* Product image frame */
+.hero .hero-image-frame {
+  animation:
+    hero-image-enter 0.9s 0.15s ease both,
+    hero-glow 4s 1.2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* Gentle image zoom on hover */
+.hero .hero-image-frame img {
+  transition: transform 0.6s ease;
+}
+
+.hero .hero-image-frame:hover img {
+  transform: scale(1.045);
+}
+
+/* Floating product note */
+.hero .floating-note {
+  animation:
+    hero-text-enter 0.8s 0.6s ease both,
+    hero-float 4s 1.5s ease-in-out infinite;
+}
+
+/* Small promise icons */
+.hero .promise-icon {
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.hero .hero-promises > div:hover .promise-icon {
+  transform: translateY(-3px) scale(1.08);
+  background: #A8C94A;
+}
+
+/* Rangoli decorations */
+.hero .rangoli-one {
+  animation: hero-float 5s ease-in-out infinite;
+}
+
+.hero .rangoli-two {
+  animation: hero-rangoli 6s ease-in-out infinite alternate;
+}
+
+/* Decorative leaves and symbols */
+.hero .hero-decor {
+  animation: hero-float 6s ease-in-out infinite;
+}
+
+.hero .decor-right {
+  animation-delay: 1.5s;
+}
+
+/* Glowing background circle */
+.hero .hero-image-glow {
+  animation: hero-glow 5s ease-in-out infinite;
+}
+
+/* Buttons */
+.hero .hero-buttons .button {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.hero .hero-buttons .button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(3, 69, 45, 0.16);
+}
+
+/* Mobile performance */
+@media (max-width: 650px) {
+  .hero .hero-image-frame {
+    animation: hero-image-enter 0.8s 0.1s ease both;
+  }
+
+  .hero .hero-image-glow {
+    animation: none;
+  }
+
+  .hero .hero-decor {
+    animation-duration: 8s;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .hero .eyebrow,
+  .hero h1,
+  .hero .hero-subtitle,
+  .hero .hero-description,
+  .hero .hero-buttons,
+  .hero .hero-promises,
+  .hero .hero-image-frame,
+  .hero .floating-note,
+  .hero .rangoli-one,
+  .hero .rangoli-two,
+  .hero .hero-decor,
+  .hero .hero-image-glow {
+    animation: none !important;
+  }
+}

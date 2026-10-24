@@ -1,3 +1,5 @@
+/* ===== Product Grid ===== */
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 380px));
@@ -5,63 +7,88 @@
   gap: 28px;
   align-items: stretch;
 }
+
+/* ===== Product Card ===== */
+
 .product-card {
-  border: 1px solid #edd9e5;
-  background: #fffdf8;
+  border: 1px solid #D8E1D4;
+  background: #FFFDF6;
   border-radius: 23px;
   overflow: hidden;
-  box-shadow: 0 12px 36px #59284e0b;
+  box-shadow: 0 12px 36px rgba(3, 69, 45, 0.07);
   transition:
     transform 0.25s,
-    box-shadow 0.25s;
+    box-shadow 0.25s,
+    border-color 0.25s;
 }
+
 .product-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 20px 42px #59284e17;
+  border-color: #A8C94A;
+  box-shadow: 0 20px 42px rgba(3, 69, 45, 0.13);
 }
+
+/* ===== Product Image ===== */
 
 .product-image-wrap {
   position: relative;
   width: 100%;
   height: 340px;
   overflow: hidden;
-  background: #f7ead5;
+  background: #F4EBDD;
 }
 
 .product-image-wrap img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
+  transition: transform 0.35s ease;
+}
+
+.product-card:hover .product-image-wrap img {
+  transform: scale(1.03);
 }
 
 .product-image-wrap.image-fallback img {
   display: none;
 }
+
 .image-fallback-label {
   display: none;
   position: absolute;
-  color: var(--plum);
+  inset: 0;
+  align-items: center;
+  justify-content: center;
+  color: #03452D;
   font-family: "Playfair Display", serif;
   font-size: 24px;
+  text-align: center;
 }
+
 .image-fallback .image-fallback-label {
-  display: block;
+  display: flex;
 }
+
+/* ===== Product Tag ===== */
+
 .product-tag {
   position: absolute;
   top: 15px;
   left: 15px;
   z-index: 2;
-  background: #fff9efeb;
-  border: 1px solid #fff;
+  background: #FFFDF6;
+  border: 1px solid #D8E1D4;
   border-radius: 999px;
   padding: 7px 11px;
-  color: var(--plum);
+  color: #03452D;
   font-size: 9px;
   font-weight: 700;
 }
+
+/* ===== Discount Pill ===== */
+
 .discount-pill {
   position: absolute;
   top: 52px;
@@ -70,13 +97,16 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  background: var(--coral);
-  color: white;
+  background: #FF6B35;
+  color: #FFFFFF;
   border-radius: 999px;
   padding: 6px 9px;
   font-size: 9px;
   font-weight: 700;
 }
+
+/* ===== Quick Add Button ===== */
+
 .quick-add {
   position: absolute;
   right: 15px;
@@ -86,21 +116,37 @@
   height: 42px;
   border: 0;
   border-radius: 50%;
-  background: var(--plum);
-  color: white;
+  background: #03452D;
+  color: #FFFDF6;
   display: grid;
   place-items: center;
-  box-shadow: 0 5px 14px #57244f33;
+  box-shadow: 0 5px 14px rgba(3, 69, 45, 0.22);
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
 }
+
+.quick-add:hover {
+  background: #A8C94A;
+  color: #023823;
+  transform: scale(1.06);
+}
+
+/* ===== Product Information ===== */
+
 .product-info {
   padding: 23px 24px 25px;
 }
+
 .product-type {
   font-size: 9px;
   font-weight: 700;
   letter-spacing: 0.16em;
-  color: var(--purple);
+  color: #603515;
 }
+
 .product-title-row {
   display: flex;
   align-items: flex-start;
@@ -108,32 +154,87 @@
   gap: 14px;
   margin: 10px 0 8px;
 }
+
 .product-title-row h3 {
   font-family: "Playfair Display", serif;
   font-size: 25px;
   font-weight: 500;
-  color: var(--plum);
+  color: #03452D;
   margin: 0;
 }
+
 .product-price {
   white-space: nowrap;
   font-weight: 700;
   font-size: 15px;
-  color: var(--plum);
+  color: #03452D;
   text-align: right;
 }
+
 .product-price del {
   display: block;
   font-size: 10px;
-  color: #9c8999;
+  color: #8A7867;
   font-weight: 400;
 }
+
 .product-info p {
   font-size: 12px;
   line-height: 1.7;
   min-height: 42px;
   margin-bottom: 18px;
+  color: #657568;
 }
+
 .product-info .text-link {
   cursor: pointer;
+  color: #03452D;
+  transition: color 0.2s ease;
+}
+
+.product-info .text-link:hover {
+  color: #603515;
+}
+
+/* ===== Responsive Product Grid ===== */
+
+@media (max-width: 650px) {
+  .product-grid {
+    grid-template-columns: minmax(0, 380px);
+    gap: 24px;
+  }
+
+  .product-image-wrap {
+    height: 300px;
+  }
+
+  .product-info {
+    padding: 20px;
+  }
+
+  .product-title-row h3 {
+    font-size: 23px;
+  }
+}
+
+@media (max-width: 380px) {
+  .product-image-wrap {
+    height: 260px;
+  }
+
+  .product-info {
+    padding: 18px;
+  }
+
+  .product-title-row {
+    gap: 8px;
+  }
+
+  .product-title-row h3 {
+    font-size: 21px;
+  }
+
+  .product-price {
+    font-size: 13px;
+  }
 }

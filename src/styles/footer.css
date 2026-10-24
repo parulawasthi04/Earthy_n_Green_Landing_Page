@@ -1,8 +1,11 @@
+/* ===== Earthy n Green Footer ===== */
+
 footer {
-  background: #351630;
-  color: #fff4e8;
+  background: #03452D;
+  color: #FFFDF6;
   padding: 55px max(6vw, 24px) 0;
 }
+
 .footer-main {
   display: grid;
   grid-template-columns: 1.2fr 0.7fr 0.8fr 1fr;
@@ -11,77 +14,308 @@ footer {
   margin: auto;
   padding-bottom: 42px;
 }
+
+/* ===== Footer Brand ===== */
+
 .footer-brand {
-  color: #fff4e8;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #FFFDF6;
+  text-decoration: none;
 }
+
+/* Circular Logo Container */
+
 .footer-brand .brand-mark {
-  background: #f8dba3;
-  color: var(--plum);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: #FFFDF6;
+  border-radius: 50%;
+  overflow: hidden;
 }
+
+/* Actual Logo Image */
+
+.footer-brand .brand-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+
+/* Brand Name */
+
+.footer-brand > span:last-child {
+  color: #FFFDF6;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.footer-brand > span:last-child i {
+  color: #A8C94A;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+}
+
 .footer-brand-col > p {
   font-size: 11px;
-  color: #d9c6d5;
+  color: #D4E3D2;
   max-width: 240px;
   margin: 18px 0;
+  line-height: 1.8;
 }
+
+/* ===== Brand Motto ===== */
+
 .footer-motto {
   display: flex;
   align-items: center;
   gap: 7px;
-  color: #ffd36d;
+  color: #C5DF76;
   font-size: 10px;
+  line-height: 1.6;
 }
+
+.footer-motto svg {
+  flex-shrink: 0;
+  color: #A8C94A;
+}
+
+/* ===== Footer Links ===== */
+
 .footer-links {
   display: flex;
   flex-direction: column;
   gap: 13px;
   font-size: 11px;
-  color: #d9c6d5;
+  color: #D4E3D2;
 }
+
 .footer-links > b {
-  color: #fff4e8;
+  color: #FFFDF6;
   font-size: 12px;
   margin-bottom: 5px;
 }
+
 .footer-links a {
   display: flex;
   align-items: center;
   gap: 7px;
+  width: fit-content;
+  color: #D4E3D2;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
+
 .footer-links a:hover {
-  color: #ffd36d;
+  color: #C5DF76;
 }
+
+.footer-links a svg {
+  flex-shrink: 0;
+  color: #A8C94A;
+}
+
+/* ===== Location ===== */
+
 .footer-location {
   display: flex;
   align-items: center;
   gap: 7px;
+  color: #D4E3D2;
 }
+
+.footer-location svg {
+  flex-shrink: 0;
+  color: #A8C94A;
+}
+
+/* ===== Footer Call To Action ===== */
+
 .footer-cta .section-kicker {
-  color: #ffd36d;
+  color: #C5DF76;
 }
+
 .footer-cta h3 {
   font-family: "Playfair Display", serif;
   font-size: 27px;
   line-height: 1.2;
   font-weight: 500;
   margin: 13px 0 22px;
+  color: #FFFDF6;
 }
+
 .footer-cta .button {
   font-size: 11px;
 }
+
+/* Light Button on Dark Green Footer */
+
+.footer-cta .button-light {
+  background: #FFFDF6;
+  color: #03452D;
+  border: 1px solid #FFFDF6;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.footer-cta .button-light:hover {
+  background: #A8C94A;
+  color: #023823;
+  border-color: #A8C94A;
+}
+
+/* ===== Footer Bottom Bar ===== */
+
 .footer-bottom {
   max-width: 1200px;
   margin: auto;
-  border-top: 1px solid #ffffff25;
+  border-top: 1px solid rgba(255, 253, 246, 0.2);
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 18px;
   padding: 18px 0;
-  color: #cbb7c8;
+  color: #C5D6C6;
   font-size: 10px;
 }
+
 .footer-bottom span:last-child {
   display: flex;
   align-items: center;
   gap: 6px;
+}
+
+/* Small Circular Logo in Bottom Bar */
+
+.footer-bottom .brand-logo {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  object-position: center;
+  display: inline-block;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: #FFFDF6;
+}
+
+.footer-bottom svg {
+  color: #A8C94A;
+  flex-shrink: 0;
+}
+
+/* ===== Tablet Responsive ===== */
+
+@media (max-width: 1000px) {
+  .footer-main {
+    grid-template-columns: 1.2fr 0.8fr 0.8fr;
+    gap: 32px;
+  }
+
+  .footer-cta {
+    grid-column: 1 / -1;
+    padding-top: 10px;
+  }
+}
+
+/* ===== Mobile Responsive ===== */
+
+@media (max-width: 600px) {
+  footer {
+    padding: 38px 22px 0;
+  }
+
+  .footer-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px 22px;
+    padding-bottom: 30px;
+  }
+
+  .footer-brand-col {
+    grid-column: 1 / -1;
+  }
+
+  .footer-brand .brand-mark {
+    width: 42px;
+    height: 42px;
+  }
+
+  .footer-brand > span:last-child {
+    font-size: 19px;
+  }
+
+  .footer-brand-col > p {
+    max-width: 300px;
+    margin: 14px 0;
+    font-size: 12px;
+  }
+
+  .footer-motto {
+    font-size: 10px;
+  }
+
+  .footer-links {
+    gap: 12px;
+    font-size: 12px;
+  }
+
+  .footer-links > b {
+    font-size: 13px;
+  }
+
+  .footer-cta {
+    grid-column: 1 / -1;
+    padding-top: 4px;
+  }
+
+  .footer-cta h3 {
+    font-size: 26px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 16px 0;
+    line-height: 1.6;
+    font-size: 10px;
+  }
+}
+
+/* ===== Small Mobile Screens ===== */
+
+@media (max-width: 360px) {
+  footer {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .footer-main {
+    column-gap: 14px;
+  }
+
+  .footer-brand {
+    gap: 8px;
+  }
+
+  .footer-brand .brand-mark {
+    width: 38px;
+    height: 38px;
+  }
+
+  .footer-brand > span:last-child {
+    font-size: 17px;
+  }
 }

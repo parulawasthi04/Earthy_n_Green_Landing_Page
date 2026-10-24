@@ -1,6 +1,12 @@
+
+/* =========================
+   IMPACT SECTION
+========================= */
+
 .impact-section {
-  background: #fffdf8;
+  background: #FFFDF6;
 }
+
 .impact-grid {
   display: flex;
   align-items: center;
@@ -9,11 +15,13 @@
   max-width: 1000px;
   margin: 0 auto;
 }
+
 .impact-item {
   text-align: center;
   flex: 1;
   max-width: 260px;
 }
+
 .impact-icon {
   width: 56px;
   height: 56px;
@@ -21,32 +29,43 @@
   place-items: center;
   margin: 0 auto 18px;
   border-radius: 50%;
-  background: #f9dfb2;
-  color: var(--plum);
+  background: #E8F0DF;
+  color: #03452D;
 }
+
 .impact-item h3 {
   font-family: "Playfair Display", serif;
   font-size: 20px;
-  color: var(--plum);
+  color: #03452D;
   font-weight: 500;
   margin-bottom: 8px;
 }
+
 .impact-item p {
   font-size: 11px;
   line-height: 1.7;
+  color: #657568;
 }
+
 .impact-divider {
   width: 1px;
   height: 100px;
-  background: var(--line);
+  background: #D8E1D4;
 }
+
+
+/* =========================
+   OFFERINGS SECTION
+========================= */
+
 .offerings-section {
-  background: var(--plum);
-  color: #fff8ef;
+  background: #03452D;
+  color: #FFFDF6;
   padding: 75px max(8vw, 25px);
   position: relative;
   overflow: hidden;
 }
+
 .offerings-inner {
   max-width: 1100px;
   margin: auto;
@@ -57,80 +76,120 @@
   position: relative;
   z-index: 1;
 }
+
 .offerings-section .section-kicker {
-  color: #ffd36d;
+  color: #A8C94A;
 }
+
 .offerings-section h2 {
   font-size: clamp(38px, 4.5vw, 58px);
   line-height: 1.08;
   margin: 15px 0 20px;
+  color: #FFFDF6;
 }
+
 .offerings-section h2 em {
-  color: #ff9b89;
+  color: #A8C94A;
 }
+
 .offerings-section p {
-  color: #e3cbdc;
+  color: #DCE8D9;
   font-size: 13px;
   max-width: 440px;
   margin-bottom: 25px;
+  line-height: 1.8;
 }
+
 .offering-list > div {
   display: flex;
   align-items: center;
   gap: 18px;
   padding: 22px 0;
-  border-bottom: 1px solid #ffffff30;
+  border-bottom: 1px solid #FFFFFF30;
 }
+
 .offering-number {
-  color: #ffd36d;
+  color: #A8C94A;
   font-family: "Playfair Display", serif;
   font-size: 22px;
 }
+
 .offering-list span:nth-child(2) {
   flex: 1;
 }
+
 .offering-list b,
 .offering-list small {
   display: block;
 }
+
 .offering-list b {
   font-size: 14px;
+  color: #FFFDF6;
 }
+
 .offering-list small {
   font-size: 11px;
-  color: #e3cbdc;
+  color: #DCE8D9;
   margin-top: 5px;
+  line-height: 1.6;
 }
+
 .offering-list svg {
   width: 17px;
-  color: #ff9b89;
+  color: #A8C94A;
+  flex-shrink: 0;
 }
+
 .offerings-sparkle {
   position: absolute;
   right: 4%;
   top: -38px;
   font-size: 150px;
-  color: #ffffff0e;
+  color: #FFFFFF0E;
+  pointer-events: none;
 }
+
+
+/* =========================
+   PROMOTIONAL SECTION
+========================= */
+
 .pramo-section {
   text-align: center;
   padding: 80px 24px;
-  background: linear-gradient(130deg, #fff4df, #f8e3ed);
+  background: linear-gradient(
+    130deg,
+    #FFFDF6,
+    #E8F0DF
+  );
 }
+
 .pramo-section h2 {
   font-size: clamp(36px, 4vw, 51px);
   margin: 14px 0;
+  color: #03452D;
 }
+
 .pramo-section p {
   max-width: 600px;
   margin: 0 auto 23px;
   font-size: 13px;
+  color: #657568;
+  line-height: 1.8;
 }
+
 .pramo-ornament {
-  color: var(--coral);
+  color: #A8C94A;
   font-size: 35px;
   margin-bottom: 12px;
 }
+
+
+/* =========================
+   IMPACT PAGE CARDS
+========================= */
+
 .impact-page-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -138,27 +197,49 @@
   max-width: 1100px;
   margin: auto;
 }
+
 .impact-page-grid article {
   padding: 28px 23px;
-  background: #fffdf8;
-  border: 1px solid var(--line);
+  background: #FFFDF6;
+  border: 1px solid #D8E1D4;
   border-radius: 20px;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
 }
+
+.impact-page-grid article:hover {
+  transform: translateY(-4px);
+  border-color: #A8C94A;
+  box-shadow: 0 10px 28px #03452D0D;
+}
+
 .impact-page-grid article > svg {
-  color: var(--coral);
+  color: #A8C94A;
   width: 27px;
   height: 27px;
   margin-bottom: 20px;
 }
+
 .impact-page-grid h3 {
   font-family: "Playfair Display", serif;
-  color: var(--plum);
+  color: #03452D;
   font-weight: 500;
   font-size: 20px;
 }
+
 .impact-page-grid p {
   font-size: 12px;
+  color: #657568;
+  line-height: 1.8;
 }
+
+
+/* =========================
+   TESTIMONIALS
+========================= */
+
 .testimonial-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -166,38 +247,61 @@
   max-width: 1050px;
   margin: auto;
 }
+
 .testimonial-card {
   padding: 27px;
-  background: #fffdf8;
-  border: 1px solid var(--line);
+  background: #FFFDF6;
+  border: 1px solid #D8E1D4;
   border-radius: 18px;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px #03452D0D;
+}
+
 .testimonial-card > svg {
-  color: var(--coral);
+  color: #603515;
 }
+
 .testimonial-card .stars {
   display: flex;
   gap: 3px;
-  color: #e9ac27;
+  color: #C79A43;
   margin: 16px 0;
 }
+
 .testimonial-card p {
   font-size: 13px;
+  line-height: 1.8;
   min-height: 78px;
+  color: #657568;
 }
+
 .testimonial-card b,
 .testimonial-card small {
   display: block;
 }
+
 .testimonial-card b {
-  color: var(--plum);
+  color: #03452D;
   font-size: 13px;
 }
+
 .testimonial-card small {
   font-size: 10px;
-  color: var(--muted);
+  color: #657568;
   margin-top: 4px;
 }
+
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
 .contact-grid {
   display: grid;
   grid-template-columns: 0.7fr 1fr;
@@ -205,33 +309,123 @@
   max-width: 1050px;
   margin: auto;
 }
+
 .contact-info {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 .contact-info > div {
   display: flex;
   align-items: flex-start;
   gap: 14px;
   padding: 20px;
-  border: 1px solid var(--line);
+  border: 1px solid #D8E1D4;
   border-radius: 16px;
-  background: #fffdf8;
+  background: #FFFDF6;
 }
+
 .contact-info svg {
-  color: var(--coral);
+  color: #A8C94A;
+  flex-shrink: 0;
 }
+
 .contact-info b,
 .contact-info small {
   display: block;
 }
+
 .contact-info b {
-  color: var(--plum);
+  color: #03452D;
   margin-bottom: 5px;
 }
+
 .contact-info small {
   font-size: 11px;
-  color: var(--muted);
+  color: #657568;
   line-height: 1.6;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 1050px) {
+  .impact-page-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .offerings-inner {
+    gap: 45px;
+  }
+}
+
+@media (max-width: 760px) {
+  .impact-grid {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .impact-item {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .impact-divider {
+    width: 100px;
+    height: 1px;
+  }
+
+  .offerings-section {
+    padding: 55px 24px;
+  }
+
+  .offerings-inner {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .offerings-sparkle {
+    right: -15px;
+    top: -20px;
+    font-size: 100px;
+  }
+
+  .pramo-section {
+    padding: 60px 20px;
+  }
+
+  .impact-page-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-card p {
+    min-height: auto;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}
+
+@media (max-width: 400px) {
+  .offerings-section {
+    padding: 45px 18px;
+  }
+
+  .offering-list > div {
+    gap: 12px;
+  }
+
+  .impact-page-grid article,
+  .testimonial-card {
+    padding: 22px 18px;
+  }
 }
